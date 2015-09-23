@@ -29,3 +29,8 @@ Feature: Hear Shout
     And "Lauren" is in "Islesworth Station"
     When "Claire" shouts "hi"
     Then "Lauren" should receive the message
+
+  Scenario: Jim does not hear his own message
+    Given "Jim" is in "Osterley Station"
+    When "Jim" shouts "hello"
+    Then "Jim" should not receive the message
